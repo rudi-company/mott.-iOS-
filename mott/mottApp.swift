@@ -1,32 +1,13 @@
-//
-//  mottApp.swift
-//  mott
-//
-//  Created by Deny Tsjapanov on 06/06/2026.
-//
-
 import SwiftUI
-import SwiftData
 
 @main
-struct mottApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+struct MottApp: App {
+    @State private var audioManager = AudioManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(audioManager)
         }
-        .modelContainer(sharedModelContainer)
     }
 }
