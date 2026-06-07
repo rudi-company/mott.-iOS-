@@ -6,6 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		81B0B23F2FD5649C0071A615 /* mott_app.icon in Resources */ = {isa = PBXBuildFile; fileRef = 81B0B23E2FD5649C0071A615 /* mott_app.icon */; };
+		81B0B2412FD586020071A615 /* CourseLessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0B2402FD586020071A615 /* CourseLessonPlayerView.swift */; };
+		81B0B2432FD587FC0071A615 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0B2422FD587FC0071A615 /* AppSettings.swift */; };
+		81B0B2452FD587FD0071A615 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0B2442FD587FD0071A615 /* SettingsView.swift */; };
+		81E333612FD450340054C7E0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333602FD450340054C7E0 /* AudioManager.swift */; };
+		81E333632FD450520054C7E0 /* LearningModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333622FD450520054C7E0 /* LearningModels.swift */; };
+		81E333652FD450520054C7E0 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333642FD450520054C7E0 /* SharedViews.swift */; };
+		81E333672FD450710054C7E0 /* MockCourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333662FD450710054C7E0 /* MockCourseData.swift */; };
+		81E333692FD450BF0054C7E0 /* LearnFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333682FD450BF0054C7E0 /* LearnFeature.swift */; };
+		81E3336B2FD450C00054C7E0 /* PracticeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3336A2FD450C00054C7E0 /* PracticeFeature.swift */; };
+		81E3336D2FD450DF0054C7E0 /* DictionaryFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3336C2FD450DF0054C7E0 /* DictionaryFeature.swift */; };
+		81E3336F2FD450E00054C7E0 /* ProfileFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3336E2FD450E00054C7E0 /* ProfileFeature.swift */; };
+		81E3337F2FD4C2F60054C7E0 /* CourseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333712FD4BD650054C7E0 /* CourseModels.swift */; };
+		81E333802FD4C2FB0054C7E0 /* CourseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333722FD4BD650054C7E0 /* CourseLevel.swift */; };
+		81E333812FD4C3000054C7E0 /* CourseLibrarySeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333732FD4BDB60054C7E0 /* CourseLibrarySeed.swift */; };
+		81E333822FD4C3050054C7E0 /* CourseLibraryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333742FD4BDF20054C7E0 /* CourseLibraryRepository.swift */; };
+		81E333832FD4C30B0054C7E0 /* CourseLibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333752FD4BDF20054C7E0 /* CourseLibraryViewModel.swift */; };
+		81E333842FD4C3100054C7E0 /* CourseLibraryValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333762FD4BDF30054C7E0 /* CourseLibraryValidator.swift */; };
+		81E333852FD4C3160054C7E0 /* CourseLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333772FD4BE0C0054C7E0 /* CourseLibraryView.swift */; };
+		81E333862FD4C31C0054C7E0 /* CourseUnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333782FD4BE0C0054C7E0 /* CourseUnitListView.swift */; };
+		81E333872FD4C3220054C7E0 /* CourseLessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E333792FD4BE2D0054C7E0 /* CourseLessonListView.swift */; };
+		81E333882FD4C3270054C7E0 /* CourseLessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3337A2FD4BE2E0054C7E0 /* CourseLessonDetailView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		81E3330D2FD44DCC0054C7E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +49,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81B0B23E2FD5649C0071A615 /* mott_app.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = mott_app.icon; sourceTree = "<group>"; };
+		81B0B2402FD586020071A615 /* CourseLessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLessonPlayerView.swift; sourceTree = "<group>"; };
+		81B0B2422FD587FC0071A615 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		81B0B2442FD587FD0071A615 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		81E332FD2FD44DCA0054C7E0 /* mott.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mott.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E3330C2FD44DCC0054C7E0 /* mottTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mottTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E333162FD44DCC0054C7E0 /* mottUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mottUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E333602FD450340054C7E0 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		81E333622FD450520054C7E0 /* LearningModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModels.swift; sourceTree = "<group>"; };
+		81E333642FD450520054C7E0 /* SharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViews.swift; sourceTree = "<group>"; };
+		81E333662FD450710054C7E0 /* MockCourseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCourseData.swift; sourceTree = "<group>"; };
+		81E333682FD450BF0054C7E0 /* LearnFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnFeature.swift; sourceTree = "<group>"; };
+		81E3336A2FD450C00054C7E0 /* PracticeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeFeature.swift; sourceTree = "<group>"; };
+		81E3336C2FD450DF0054C7E0 /* DictionaryFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryFeature.swift; sourceTree = "<group>"; };
+		81E3336E2FD450E00054C7E0 /* ProfileFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeature.swift; sourceTree = "<group>"; };
+		81E333712FD4BD650054C7E0 /* CourseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModels.swift; sourceTree = "<group>"; };
+		81E333722FD4BD650054C7E0 /* CourseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLevel.swift; sourceTree = "<group>"; };
+		81E333732FD4BDB60054C7E0 /* CourseLibrarySeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLibrarySeed.swift; sourceTree = "<group>"; };
+		81E333742FD4BDF20054C7E0 /* CourseLibraryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLibraryRepository.swift; sourceTree = "<group>"; };
+		81E333752FD4BDF20054C7E0 /* CourseLibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLibraryViewModel.swift; sourceTree = "<group>"; };
+		81E333762FD4BDF30054C7E0 /* CourseLibraryValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLibraryValidator.swift; sourceTree = "<group>"; };
+		81E333772FD4BE0C0054C7E0 /* CourseLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLibraryView.swift; sourceTree = "<group>"; };
+		81E333782FD4BE0C0054C7E0 /* CourseUnitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseUnitListView.swift; sourceTree = "<group>"; };
+		81E333792FD4BE2D0054C7E0 /* CourseLessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLessonListView.swift; sourceTree = "<group>"; };
+		81E3337A2FD4BE2E0054C7E0 /* CourseLessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLessonDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +126,18 @@
 				81E3330F2FD44DCC0054C7E0 /* mottTests */,
 				81E333192FD44DCC0054C7E0 /* mottUITests */,
 				81E332FE2FD44DCA0054C7E0 /* Products */,
+				81E333602FD450340054C7E0 /* AudioManager.swift */,
+				81B0B23E2FD5649C0071A615 /* mott_app.icon */,
+				81E333622FD450520054C7E0 /* LearningModels.swift */,
+				81E333642FD450520054C7E0 /* SharedViews.swift */,
+				81E333662FD450710054C7E0 /* MockCourseData.swift */,
+				81E333682FD450BF0054C7E0 /* LearnFeature.swift */,
+				81E3336A2FD450C00054C7E0 /* PracticeFeature.swift */,
+				81E3336C2FD450DF0054C7E0 /* DictionaryFeature.swift */,
+				81E3336E2FD450E00054C7E0 /* ProfileFeature.swift */,
+				81E333702FD4BCDE0054C7E0 /* CourseLibrary */,
+				81B0B2422FD587FC0071A615 /* AppSettings.swift */,
+				81B0B2442FD587FD0071A615 /* SettingsView.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +149,24 @@
 				81E333162FD44DCC0054C7E0 /* mottUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		81E333702FD4BCDE0054C7E0 /* CourseLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				81E333712FD4BD650054C7E0 /* CourseModels.swift */,
+				81E333722FD4BD650054C7E0 /* CourseLevel.swift */,
+				81E333732FD4BDB60054C7E0 /* CourseLibrarySeed.swift */,
+				81E333742FD4BDF20054C7E0 /* CourseLibraryRepository.swift */,
+				81E333752FD4BDF20054C7E0 /* CourseLibraryViewModel.swift */,
+				81E333762FD4BDF30054C7E0 /* CourseLibraryValidator.swift */,
+				81E333772FD4BE0C0054C7E0 /* CourseLibraryView.swift */,
+				81E333782FD4BE0C0054C7E0 /* CourseUnitListView.swift */,
+				81E333792FD4BE2D0054C7E0 /* CourseLessonListView.swift */,
+				81E3337A2FD4BE2E0054C7E0 /* CourseLessonDetailView.swift */,
+				81B0B2402FD586020071A615 /* CourseLessonPlayerView.swift */,
+			);
+			path = CourseLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B0B23F2FD5649C0071A615 /* mott_app.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +314,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E3336F2FD450E00054C7E0 /* ProfileFeature.swift in Sources */,
+				81B0B2452FD587FD0071A615 /* SettingsView.swift in Sources */,
+				81E333612FD450340054C7E0 /* AudioManager.swift in Sources */,
+				81E333802FD4C2FB0054C7E0 /* CourseLevel.swift in Sources */,
+				81E333632FD450520054C7E0 /* LearningModels.swift in Sources */,
+				81E333812FD4C3000054C7E0 /* CourseLibrarySeed.swift in Sources */,
+				81E3336D2FD450DF0054C7E0 /* DictionaryFeature.swift in Sources */,
+				81E333862FD4C31C0054C7E0 /* CourseUnitListView.swift in Sources */,
+				81E333692FD450BF0054C7E0 /* LearnFeature.swift in Sources */,
+				81E333832FD4C30B0054C7E0 /* CourseLibraryViewModel.swift in Sources */,
+				81E333842FD4C3100054C7E0 /* CourseLibraryValidator.swift in Sources */,
+				81E333672FD450710054C7E0 /* MockCourseData.swift in Sources */,
+				81E333652FD450520054C7E0 /* SharedViews.swift in Sources */,
+				81E3336B2FD450C00054C7E0 /* PracticeFeature.swift in Sources */,
+				81B0B2412FD586020071A615 /* CourseLessonPlayerView.swift in Sources */,
+				81E3337F2FD4C2F60054C7E0 /* CourseModels.swift in Sources */,
+				81E333882FD4C3270054C7E0 /* CourseLessonDetailView.swift in Sources */,
+				81B0B2432FD587FC0071A615 /* AppSettings.swift in Sources */,
+				81E333872FD4C3220054C7E0 /* CourseLessonListView.swift in Sources */,
+				81E333822FD4C3050054C7E0 /* CourseLibraryRepository.swift in Sources */,
+				81E333852FD4C3160054C7E0 /* CourseLibraryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -337,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -393,13 +494,15 @@
 		81E333212FD44DCC0054C7E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = mott_app;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A7J6D8HGFP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = mott.;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -425,13 +528,15 @@
 		81E333222FD44DCC0054C7E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = mott_app;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A7J6D8HGFP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = mott.;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

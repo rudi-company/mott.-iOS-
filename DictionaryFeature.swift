@@ -14,28 +14,34 @@ final class DictionaryViewModel {
         return words.filter { word in
             word.ingush.localizedStandardContains(trimmedSearchText)
                 || word.pronunciation.localizedStandardContains(trimmedSearchText)
-                || word.meaning.localizedStandardContains(trimmedSearchText)
+                || word.meanings.values.contains { $0.localizedStandardContains(trimmedSearchText) }
         }
     }
 
-    init(words: [Word] = MockCourseData.dictionaryWords) {
+    init() {
+        self.words = MockCourseData.dictionaryWords
+    }
+
+    init(words: [Word]) {
         self.words = words
     }
 }
 
 struct DictionaryView: View {
+    @Environment(AppSettings.self) private var appSettings
     @State private var viewModel = DictionaryViewModel()
 
     var body: some View {
         NavigationStack {
             List(viewModel.filteredWords) { word in
                 NavigationLink(value: word) {
-                    DictionaryWordRow(word: word)
+                    DictionaryWordRow(word: word, baseLanguage: appSettings.baseLanguage)
                 }
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Dictionary")
-            .searchable(text: $viewModel.searchText, prompt: "Search Ingush or English")
+            .settingsToolbar()
+            .searchable(text: $viewModel.searchText, prompt: "Search Ingush or translation")
             .navigationDestination(for: Word.self) { word in
                 WordDetailView(word: word)
             }
@@ -50,6 +56,7 @@ struct DictionaryView: View {
 
 private struct DictionaryWordRow: View {
     let word: Word
+    let baseLanguage: BaseLanguage
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -57,7 +64,7 @@ private struct DictionaryWordRow: View {
                 Text(word.ingush).font(.headline)
                 Text(word.pronunciation).font(.subheadline).foregroundStyle(.secondary)
             }
-            Text(word.meaning).font(.subheadline).foregroundStyle(.secondary)
+            Text(word.meaning(in: baseLanguage)).font(.subheadline).foregroundStyle(.secondary)
         }
         .padding(.vertical, 4)
     }
@@ -65,6 +72,7 @@ private struct DictionaryWordRow: View {
 
 struct WordDetailView: View {
     @Environment(AudioManager.self) private var audioManager
+    @Environment(AppSettings.self) private var appSettings
     let word: Word
 
     var body: some View {
@@ -77,7 +85,7 @@ struct WordDetailView: View {
                     Text(word.pronunciation)
                         .font(.title3)
                         .foregroundStyle(.secondary)
-                    Text(word.meaning)
+                    Text(word.meaning(in: appSettings.baseLanguage))
                         .font(.headline)
                 }
                 .padding(.vertical, 8)
@@ -89,23 +97,25 @@ struct WordDetailView: View {
 
             Section("Examples") {
                 ForEach(word.examples) { phrase in
-                    PhraseExampleRow(phrase: phrase)
+                    PhraseExampleRow(phrase: phrase, baseLanguage: appSettings.baseLanguage)
                 }
             }
         }
-        .navigationTitle(word.meaning.capitalized)
+        .navigationTitle(word.meaning(in: appSettings.baseLanguage).capitalized)
         .navigationBarTitleDisplayMode(.inline)
+        .settingsToolbar()
     }
 }
 
 private struct PhraseExampleRow: View {
     let phrase: Phrase
+    let baseLanguage: BaseLanguage
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(phrase.ingush).font(.headline)
             Text(phrase.pronunciation).font(.subheadline).foregroundStyle(.secondary)
-            Text(phrase.english).font(.subheadline).foregroundStyle(.secondary)
+            Text(phrase.translation(in: baseLanguage)).font(.subheadline).foregroundStyle(.secondary)
         }
         .padding(.vertical, 4)
     }

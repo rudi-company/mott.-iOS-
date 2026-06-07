@@ -9,12 +9,12 @@ struct ProfileView: View {
                 VStack(spacing: 24) {
                     ProfileHeaderView()
                     ProfileStatsGrid(progress: progress)
-                    SettingsPlaceholderView()
                 }
                 .padding(20)
             }
             .background(Color(.systemGroupedBackground))
             .navigationTitle("Profile")
+            .settingsToolbar()
         }
     }
 }
@@ -71,23 +71,6 @@ private struct ProfileStatCard: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)
-        .background(Color(.secondarySystemGroupedBackground))
-        .clipShape(.rect(cornerRadius: 16, style: .continuous))
-    }
-}
-
-private struct SettingsPlaceholderView: View {
-    var body: some View {
-        VStack(spacing: 0) {
-            Label("Settings", systemImage: "gearshape")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(16)
-            Divider().padding(.leading, 16)
-            Label("Course preferences", systemImage: "slider.horizontal.3")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(16)
-                .foregroundStyle(.secondary)
-        }
         .background(Color(.secondarySystemGroupedBackground))
         .clipShape(.rect(cornerRadius: 16, style: .continuous))
     }

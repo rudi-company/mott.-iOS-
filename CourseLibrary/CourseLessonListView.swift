@@ -29,6 +29,7 @@ struct CourseLessonListView: View {
             }
         }
         .navigationTitle("Unit \(unit.sequence)")
+        .settingsToolbar()
         .navigationDestination(for: CourseLesson.self) { lesson in
             CourseLessonDetailView(course: course, lesson: lesson)
         }

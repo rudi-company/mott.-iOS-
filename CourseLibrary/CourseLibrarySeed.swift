@@ -95,7 +95,6 @@ enum CourseLibrarySeed {
             makeLevel(id: "A1", title: "Basic Grammar and Daily Sentences", unitTitles: ["Nouns", "Cases I", "Cases II", "Gender and Agreement", "Adjectives"], startingUnit: 6),
             makeLevel(id: "A2", title: "Verbs and Sentence Control", unitTitles: ["Verb Basics", "Verb Classes", "Tense and Aspect I", "Negation", "Questions"], startingUnit: 11),
             makeLevel(id: "B1", title: "Real Ingush Structure", unitTitles: ["Word Order", "Motion and Direction", "Chaining and Converbs", "Relative Clauses and Subordination", "Discourse and Texts"], startingUnit: 16),
-            CourseLevel(id: "B2", title: "Advanced Reading and Expression", subtitle: "Reserved for later expansion", units: [])
         ]
     }
 
@@ -107,7 +106,7 @@ enum CourseLibrarySeed {
     }
 
     private static func makeUnit(levelID: String, sequence: Int, title: String) -> CourseUnit {
-        let unitID = "\(levelID.lowercased())_unit_\(String(format: "%02d", sequence))"
+        let unitID = "\(levelID.lowercased())_unit_\(twoDigitString(for: sequence))"
         let topicIDs = topicIDsForUnit(sequence)
         let lessons = (1...3).map { lessonNumber in
             makeLesson(levelID: levelID, unitID: unitID, unitSequence: sequence, unitTitle: title, lessonNumber: lessonNumber, topicIDs: topicIDs)
@@ -124,7 +123,7 @@ enum CourseLibrarySeed {
     }
 
     private static func makeLesson(levelID: String, unitID: String, unitSequence: Int, unitTitle: String, lessonNumber: Int, topicIDs: [String]) -> CourseLesson {
-        let lessonID = "\(unitID)_lesson_\(String(format: "%02d", lessonNumber))"
+        let lessonID = "\(unitID)_lesson_\(twoDigitString(for: lessonNumber))"
         let primaryTopicID = topicIDs[(lessonNumber - 1) % topicIDs.count]
 
         return CourseLesson(
@@ -216,6 +215,10 @@ enum CourseLibrarySeed {
         }
 
         return .multipleChoice
+    }
+
+    private static func twoDigitString(for value: Int) -> String {
+        value < 10 ? "0\(value)" : "\(value)"
     }
 
     private static func topicIDsForUnit(_ sequence: Int) -> [String] {

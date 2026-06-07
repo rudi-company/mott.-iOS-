@@ -4,17 +4,38 @@ struct Word: Identifiable, Hashable {
     let id: UUID
     let ingush: String
     let pronunciation: String
-    let meaning: String
+    let meanings: [BaseLanguage: String]
     let examples: [Phrase]
     let audioFileName: String?
 
-    init(id: UUID = UUID(), ingush: String, pronunciation: String, meaning: String, examples: [Phrase] = [], audioFileName: String? = nil) {
+    var meaning: String {
+        meaning(in: .english)
+    }
+
+    init(
+        id: UUID = UUID(),
+        ingush: String,
+        pronunciation: String,
+        meaning: String,
+        russianMeaning: String? = nil,
+        examples: [Phrase] = [],
+        audioFileName: String? = nil
+    ) {
+        var meanings: [BaseLanguage: String] = [.english: meaning]
+        if let russianMeaning {
+            meanings[.russian] = russianMeaning
+        }
+
         self.id = id
         self.ingush = ingush
         self.pronunciation = pronunciation
-        self.meaning = meaning
+        self.meanings = meanings
         self.examples = examples
         self.audioFileName = audioFileName
+    }
+
+    func meaning(in baseLanguage: BaseLanguage) -> String {
+        meanings[baseLanguage] ?? meanings[.english] ?? ""
     }
 }
 
@@ -22,15 +43,35 @@ struct Phrase: Identifiable, Hashable {
     let id: UUID
     let ingush: String
     let pronunciation: String
-    let english: String
+    let translations: [BaseLanguage: String]
     let audioFileName: String?
 
-    init(id: UUID = UUID(), ingush: String, pronunciation: String, english: String, audioFileName: String? = nil) {
+    var english: String {
+        translation(in: .english)
+    }
+
+    init(
+        id: UUID = UUID(),
+        ingush: String,
+        pronunciation: String,
+        english: String,
+        russian: String? = nil,
+        audioFileName: String? = nil
+    ) {
+        var translations: [BaseLanguage: String] = [.english: english]
+        if let russian {
+            translations[.russian] = russian
+        }
+
         self.id = id
         self.ingush = ingush
         self.pronunciation = pronunciation
-        self.english = english
+        self.translations = translations
         self.audioFileName = audioFileName
+    }
+
+    func translation(in baseLanguage: BaseLanguage) -> String {
+        translations[baseLanguage] ?? translations[.english] ?? ""
     }
 }
 

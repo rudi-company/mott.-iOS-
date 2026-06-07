@@ -28,6 +28,7 @@ struct CourseUnitListView: View {
             }
         }
         .navigationTitle(level.id)
+        .settingsToolbar()
         .navigationDestination(for: CourseUnit.self) { unit in
             CourseLessonListView(course: course, unit: unit)
         }

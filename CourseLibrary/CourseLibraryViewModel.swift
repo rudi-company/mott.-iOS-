@@ -14,7 +14,12 @@ final class CourseLibraryViewModel {
         courses.first
     }
 
-    init(repository: CourseLibraryRepository = CourseLibraryRepository()) {
+    init() {
+        self.repository = CourseLibraryRepository()
+        loadCourses()
+    }
+
+    init(repository: CourseLibraryRepository) {
         self.repository = repository
         loadCourses()
     }

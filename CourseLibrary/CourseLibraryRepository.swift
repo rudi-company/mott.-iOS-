@@ -4,7 +4,11 @@ import Foundation
 struct CourseLibraryRepository {
     private let seedCourse: Course
 
-    init(seedCourse: Course = CourseLibrarySeed.course) {
+    init() {
+        self.seedCourse = CourseLibrarySeed.course
+    }
+
+    init(seedCourse: Course) {
         self.seedCourse = seedCourse
     }
 

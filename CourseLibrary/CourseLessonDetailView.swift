@@ -105,6 +105,7 @@ struct CourseLessonDetailView: View {
         }
         .navigationTitle("Lesson")
         .navigationBarTitleDisplayMode(.inline)
+        .settingsToolbar()
     }
 }
 

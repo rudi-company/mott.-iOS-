@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct PracticeView: View {
+    @Environment(AppSettings.self) private var appSettings
     private let progress = MockCourseData.userProgress
     private let weakWords = MockCourseData.weakWords
 
@@ -9,13 +10,14 @@ struct PracticeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     ContinuePracticeCard(progress: progress)
-                    WeakWordsSection(words: weakWords)
+                    WeakWordsSection(words: weakWords, baseLanguage: appSettings.baseLanguage)
                     PracticePlaceholderGrid()
                 }
                 .padding(20)
             }
             .background(Color(.systemGroupedBackground))
             .navigationTitle("Practice")
+            .settingsToolbar()
         }
     }
 }
@@ -49,6 +51,7 @@ private struct ContinuePracticeCard: View {
 
 private struct WeakWordsSection: View {
     let words: [Word]
+    let baseLanguage: BaseLanguage
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -56,7 +59,7 @@ private struct WeakWordsSection: View {
                 .font(.headline)
             VStack(spacing: 0) {
                 ForEach(words) { word in
-                    WeakWordRow(word: word)
+                    WeakWordRow(word: word, baseLanguage: baseLanguage)
                     if word != words.last {
                         Divider().padding(.leading, 16)
                     }
@@ -70,12 +73,13 @@ private struct WeakWordsSection: View {
 
 private struct WeakWordRow: View {
     let word: Word
+    let baseLanguage: BaseLanguage
 
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 Text(word.ingush).font(.headline)
-                Text(word.meaning).font(.subheadline).foregroundStyle(.secondary)
+                Text(word.meaning(in: baseLanguage)).font(.subheadline).foregroundStyle(.secondary)
             }
             Spacer()
             Image(systemName: "arrow.triangle.2.circlepath")

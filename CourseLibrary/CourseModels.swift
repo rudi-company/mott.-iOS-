@@ -124,7 +124,9 @@ enum AudioValidationStatus: String, Codable, Hashable {
 
 /// A source pointer that tracks structure without storing copied book text.
 struct SourceReference: Identifiable, Codable, Hashable {
-    var id: String { [sourceTitle, author, chapter, section, page.map(String.init) ?? "no-page"].joined(separator: "|") }
+    var id: String {
+        [sourceTitle, author, chapter ?? "no-chapter", section ?? "no-section", page.map(String.init) ?? "no-page"].joined(separator: "|")
+    }
 
     let sourceTitle: String
     let author: String

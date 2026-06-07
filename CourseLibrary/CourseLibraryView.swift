@@ -31,6 +31,7 @@ struct CourseLibraryView: View {
                 }
             }
             .navigationTitle("Course Library")
+            .settingsToolbar()
             .navigationDestination(for: CourseLevel.self) { level in
                 if let course = viewModel.primaryCourse {
                     CourseUnitListView(course: course, level: level)
